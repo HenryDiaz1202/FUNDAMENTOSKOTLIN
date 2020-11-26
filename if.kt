@@ -3,7 +3,8 @@ fun main(){
     val hoy = if (fecha.year == 2019) true else false
     println("$hoy");*/
 
-    val edad = 20
+    println("Ingresa tu edad : \n")
+    val edad =  readLine()?.toInt() as Int
     if(edad >= 20)
     {
     println("eres mayor de edad")
