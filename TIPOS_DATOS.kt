@@ -36,4 +36,13 @@ fun main(){
     val esTR = char == char1
     println("Es char con valor C igual a char1 con valor D? R:  $esTR")
 
+    //CADENAS
+    val string = "string con \n una línea nueva"
+
+    val rawString = """
+    raw string es útil para
+    cadenas con muchas líneas"""
+
+    println("\n\n $string $rawString")
+
 }
