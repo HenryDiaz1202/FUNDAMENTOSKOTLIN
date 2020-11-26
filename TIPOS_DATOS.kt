@@ -27,4 +27,13 @@ fun main(){
     val otroTrue = x == y || y == z
 
     println("\n esTrue = $esTrue \t otroTrue = $otroTrue")
+
+    //CHAR
+
+    var char = "C"
+    var char1 = "D"
+
+    val esTR = char == char1
+    println("Es char con valor C igual a char1 con valor D? R:  $esTR")
+
 }
