@@ -7,18 +7,26 @@ fun main(){
 
             println("Esto se imprimirá por un largo tiempo!")
         }  */  
-        var a:Int = 0
-        while (a<=10) {
+
+      /*  while (a<=10) {
 
             println("Esto se imprimirá por un largo tiempo!")
             a++;
-        }  
+        }  */
     //FOR
-        val array = arrayOf("a", "b", "c")
+       val array = arrayOf("a", "b", "c")
+/*
         for (i in array.indices) {
         println(array[i])
+        }*/
+        for (a in 0..2) {
+        println(array[a])
         }
-        for (i in 6 downTo 0 step 2) {
-        println(i)
-        }
+    
+    //d while
+    var q:Int = 0
+    do{
+        println("Hola mundo")
+        q++;
+    }while(q <= 10)
 }
