@@ -1,7 +1,7 @@
-import java.time.LocalDate
+import java.util.Date;
 fun main(){
-    val fecha = LocalDate()
-    val hoy = if (fecha.year == 2019) true else false
+    val fecha = Date()
+    var hoy = if (fecha.year == 019) true else false
     println("$hoy");
 /*
     println("Ingresa tu edad : \n")

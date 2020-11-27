@@ -10,12 +10,12 @@ fun main(){
 
     //CONVERTIR
 
-    var entero = 25
-    var flotante = entero.toFloat();
+    var entero:Int = 25
+    var flotante:Float = entero.toFloat();
     print("\n entero = $entero a float = $flotante");
     
-    var flotant = 25.69
-    var enter = flotant.toInt();
+    var flotant:Float = 25.6.toFloat()
+    var enter:Int = flotant.toInt();
     print("\n flotante = $flotant a entero = $enter");
 
     //BOOLEAN
