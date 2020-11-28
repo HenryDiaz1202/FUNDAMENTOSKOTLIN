@@ -1,7 +1,7 @@
 open class Persona(var nombre:String, var apellido:String)
 
 class Estudiante(nombre:String, apellido:String,
-var asignatura:String,
+ var asignatura:String,
  var profesor:String):
  Persona(nombre,apellido)
 
