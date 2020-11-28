@@ -17,12 +17,23 @@
 class Persona(var nombre:String, var apellido:String)
 
 fun main(){
+
+    var lista_personas = ArrayList<Persona>()
+
     var persona = Persona("Yesser","Miranda")
-   // var nueva = Persona("Juan","Lopez")
-    //var nueva = Persona()
-   nueva.nombre = "Juan"
+    var nueva = Persona("Juan","Lopez")
+    var nueva1 = Persona("Henry","Diaz")
+
+    /*var nueva = Persona()
+    nueva.nombre = "Juan"
     nueva.apellido = "Lopez"*/
-    println(persona.nombre)
-    println(nueva.nombre)
+
+    lista_personas.add(persona)
+    lista_personas.add(nueva)
+    lista_personas.add(nueva1)
+
+    for(i in 0..2){
+        println("Nombre : ${lista_personas[i].nombre} _${lista_personas[i].apellido}")
+    }
    }
    
