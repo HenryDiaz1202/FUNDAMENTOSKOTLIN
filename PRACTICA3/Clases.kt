@@ -1,5 +1,5 @@
 class ImpresoraHola(var tam:Int){
-    fun imprimirHola() {
+   protected imprimirHola() {
     println("Hola!")
     }
    }
