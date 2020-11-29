@@ -32,7 +32,8 @@ fun main(){
     var lista_estudiantes = ArrayList<Estudiante>()
     var estud = Estudiante("Henry","Díaz","610-1252525-1000E",19,"Tercero","Yasmil Castillo")
     var estud1 = Estudiante("Beatriz","Sánchez","610-1252525-1000E",19,"Tercero","Yasmil Castillo")
-    var estud2 = Estudiante("Víctor","Zeledón","610-1252525-1000E",19,"Tercero","Yasmil Castillo")
+    var estud2 = Estudiante("Victor","Zeledón","610-1252525-1000E",19,"Tercero","Yasmil Castillo")
+
 
     lista_estudiantes.add(estud)
     lista_estudiantes.add(estud1)
@@ -47,30 +48,83 @@ fun main(){
     lista_administrativos.add(admin1)
     lista_administrativos.add(admin2)
 
-    //MUESTRA DE TODOS LOS DATOS
-    println("\t---------------------------------------------------------------")
-    println("\tUNIVERSIDAD")
-    println("\t---------------------------------------------------------------")
-    for(i in 0..2){
-        println("\tUniversidad : URACCAN \tRECINTO : ${lista_universidad[i].recinto} \t DIRECCION : ${lista_universidad[i].direccion}")
-    }
-    println("\n\t---------------------------------------------------------------")
-    println("\tPROFESORES")
-    println("\t---------------------------------------------------------------")
-    for(i in 0..2){
-        println("\t${i}  NOMBRE Y APELLIDO : ${lista_profesores[i].nombre}_${lista_profesores[i].apellido}\t CÉDULA : ${lista_profesores[i].cedula} \t EDAD : ${lista_profesores[i].edad} \tFACULTAD : ${lista_profesores[i].facultad} \t CANTIDAD ASIGNATURAS : ${lista_profesores[i].cantAsg}")
-    }
-    println("\n\t---------------------------------------------------------------")
-    println("\tESTUDIANTES")
-    println("\t---------------------------------------------------------------")
-    for(i in 0..2){
-        println("\t${i}  NOMBRE Y APELLIDO : ${lista_estudiantes[i].nombre}_${lista_estudiantes[i].apellido}\t CÉDULA : ${lista_estudiantes[i].cedula} \t EDAD : ${lista_estudiantes[i].edad} \tNIVEL EDUCATIVO : ${lista_estudiantes[i].nivelE} \t PROFESOR REPRESENTANTE : ${lista_estudiantes[i].prof_Rep}")
-    } 
-    println("\n\t---------------------------------------------------------------")
-    println("\tADMINISTRATIVOS")
-    println("\t---------------------------------------------------------------")
-    for(i in 0..2){
-        println("\t${i}  NOMBRE Y APELLIDO : ${lista_administrativos[i].nombre}_${lista_administrativos[i].apellido}\t CÉDULA : ${lista_administrativos[i].cedula} \t EDAD : ${lista_administrativos[i].edad} \tÁREA : ${lista_administrativos[i].area} \t JEFE INMEDIATO : ${lista_administrativos[i].jefe}")
-    }
-
+   
+    //PEDIR DATO POR TECLADO PARA USAR EL MÉTODO FIND
+    var opc = 0
+    do{
+        println("\n\tREALIZAR BÚSQUEDA\n")
+        println("\t1.Ver listas \n\t2.Buscar en lista estudiantes \n\t3.Buscar en lista maestros \n\t4.Buscar en lista administrativos \n\t0.Salir")
+        opc = readLine()?.toInt() as Int
+        
+        if(opc == 1){
+            //MUESTRA DE TODOS LOS DATOS
+            println("\t---------------------------------------------------------------")
+            println("\tUNIVERSIDAD")
+            println("\t---------------------------------------------------------------")
+            for(i in 0..2){
+                println("\tUniversidad : URACCAN \tRECINTO : ${lista_universidad[i].recinto} \t DIRECCION : ${lista_universidad[i].direccion}")
+            }
+            println("\n\t---------------------------------------------------------------")
+            println("\tPROFESORES")
+            println("\t---------------------------------------------------------------")
+            for(i in 0..2){
+                println("\t${i}  NOMBRE Y APELLIDO : ${lista_profesores[i].nombre}_${lista_profesores[i].apellido}\t CÉDULA : ${lista_profesores[i].cedula} \t EDAD : ${lista_profesores[i].edad} \tFACULTAD : ${lista_profesores[i].facultad} \t CANTIDAD ASIGNATURAS : ${lista_profesores[i].cantAsg}")
+            }
+            println("\n\t---------------------------------------------------------------")
+            println("\tESTUDIANTES")
+            println("\t---------------------------------------------------------------")
+            for(i in 0..2){
+                println("\t${i}  NOMBRE Y APELLIDO : ${lista_estudiantes[i].nombre}_${lista_estudiantes[i].apellido}\t CÉDULA : ${lista_estudiantes[i].cedula} \t EDAD : ${lista_estudiantes[i].edad} \tNIVEL EDUCATIVO : ${lista_estudiantes[i].nivelE} \t PROFESOR REPRESENTANTE : ${lista_estudiantes[i].prof_Rep}")
+            } 
+            println("\n\t---------------------------------------------------------------")
+            println("\tADMINISTRATIVOS")
+            println("\t---------------------------------------------------------------")
+            for(i in 0..2){
+                println("\t${i}  NOMBRE Y APELLIDO : ${lista_administrativos[i].nombre}_${lista_administrativos[i].apellido}\t CÉDULA : ${lista_administrativos[i].cedula} \t EDAD : ${lista_administrativos[i].edad} \tÁREA : ${lista_administrativos[i].area} \t JEFE INMEDIATO : ${lista_administrativos[i].jefe}")
+            }
+            println("\t---------------------------------------------------------------")
+        }
+        if(opc == 2){
+            println("\t---------------------------------------------------------------")
+            print("\tIngrese nombre a buscar dentro de la listas estudiantes :  ")
+            val nomb= readLine()?.toString() as String
+        
+            for(i in 0..2){
+                val fnd = lista_estudiantes.find{nomb == lista_estudiantes[i].nombre}
+                if(lista_estudiantes.contains(fnd)){
+                    println("\tEl nombre que busca existe en la lista de estudiantes")
+                }
+            }
+            println("\n\t---------------------------------------------------------------")
+        }
+        if(opc == 3){
+            println("\t---------------------------------------------------------------")
+            print("\tIngrese nombre a buscar dentro de la listas de profesores :  ")
+            val nomb= readLine()?.toString() as String
+        
+            for(i in 0..2){
+                val fnd = lista_estudiantes.find{nomb == lista_profesores[i].nombre}
+                if(lista_estudiantes.contains(fnd)){
+                    println("\tEl nombre que busca existe en la lista de profesores")
+                }
+            }
+            println("\n\t---------------------------------------------------------------")
+        }
+        if(opc == 4){
+            println("\t---------------------------------------------------------------")
+            print("\tIngrese nombre a buscar dentro de la listas de administrativos :  ")
+            val nomb= readLine()?.toString() as String
+        
+            for(i in 0..2){
+                val fnd = lista_estudiantes.find{nomb == lista_administrativos[i].nombre}
+                if(lista_estudiantes.contains(fnd)){
+                    println("\tEl nombre que busca existe en la lista de administrativos")
+                }
+            }
+            println("\n\t---------------------------------------------------------------")
+        }
+        if(opc == 0){
+          
+        }
+    } while(opc != 0);
 }
